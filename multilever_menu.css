@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-image: url(https://thiepmung.com/uploads/worigin/2022/09/07/banner-su-kien-tet-2023-dep_91dd7.jpg);
+    background-position-x: -70px;
+    background-position-y: 30px 
+}
+img{
+    height: auto;
+    max-width: 90%;
+    background-repeat: none;
+}
+nav{
+    display: flex;
+}
+.header{
+    background-color: #263ec9;
+    width: 1200px;
+    height: 30px;
+}
+.main-menu{
+    display: flex;
+    list-style: none;
+    margin-left: 200px;
+    padding: 0;
+}
+.main-menu>li:hover{
+    background-color: #777;
+    position: relative;
+}
+.main-menu> li> a{
+    text-decoration: none;
+    color: #eaf6f7;
+    font-size: 13px;
+    display: block;
+    padding: 8px 15px;
+}
+.child-menu{
+    width: 200px;
+    height: auto;
+    background-color: #263ec9;
+    list-style: none;
+    display: none;
+    position: absolute;
+}
+.child-menu li{
+    border-bottom: 1px dashed #eaf6f7;
+    position: relative;
+}
+.child-menu >li> a{
+    text-decoration: none;
+    color: #eaf6f7;
+    font-size: 13px;
+    display: block;
+    padding: 8px 15px;
+}
+.child-menu>li:hover{
+    background-color: #777;
+}
+.main-menu >li:hover .child-menu{
+    display: block;
+}
+.grandchildren{
+    background-color: #263ec9;
+    list-style: none;
+    width: 200px;
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 199px;
+    top:20px
+}
+.grandchildren >li{
+    border-bottom: 1px dashed #eaf6f7;
+    position: relative;
+}
+.grandchildren >li>a{
+    text-decoration: none;
+    color: #eaf6f7;
+    font-size: 13px;
+    display: block;
+    padding: 8px 15px;
+}
+.grandchildren>li:hover{
+    background-color: #777;
+}
+.child-menu>li:hover .grandchildren{
+    display: block;
+}
+.great-grandchildren{
+    background-color: #263ec9;
+    list-style: none;
+    width: 200px;
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 199px;
+    top:20px;
+}
+.great-grandchildren li{
+    border-bottom: 1px dashed #eaf6f7;
+    position: relative;
+}
+.great-grandchildren >li>a{
+    text-decoration: none;
+    color: #eaf6f7;
+    font-size: 13px;
+    display: block;
+    padding: 8px 15px;
+}
+.great-grandchildren>li:hover{
+    background-color: #777;
+}
+.grandchildren>li:hover .great-grandchildren{
+    display: block;
+}
