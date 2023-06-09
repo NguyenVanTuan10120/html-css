@@ -4,32 +4,37 @@ var eyeClose = document.querySelector(".eye-close");
 var email = document.querySelector(".email");
 var form = document.querySelector(".form");
 
+// ẩn password
 eyeOpen.addEventListener("click", function () {
   eyeOpen.classList.add("hidden");
   eyeClose.classList.remove("hidden");
   password.setAttribute("type", "password");
 });
+// hiện password
 eyeClose.addEventListener("click", function () {
   eyeClose.classList.add("hidden");
   eyeOpen.classList.remove("hidden");
   password.setAttribute("type", "text");
 });
 
+// hàm
 function showError(input, message) {
-  var parent = input.parentElement;
+  var parent1 = input.parentElement;
+  var parent = parent1.parentElement;
+  console.log(parent);
   var small = parent.querySelector("small");
   parent.classList.add("error");
   small.innerText = message;
 }
-
 function showSuccess(input) {
-  var parent = input.parentElement;
-  console.log(parent);
+  var parent1 = input.parentElement;
+  var parent = parent1.parentElement;
   var small = parent.querySelector("small");
   parent.classList.remove("error");
   small.innerText = "";
 }
 
+// hàm kiểm tra lỗi chưa điền thông tin
 function checkEmptyError(listInput) {
   var isEmptyError = false;
   listInput.forEach((input) => {
@@ -44,6 +49,7 @@ function checkEmptyError(listInput) {
   return isEmptyError;
 }
 
+// hàm kiểm tra email hợp lệ
 function checkEmailError() {
   const regexEmail =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -56,6 +62,8 @@ function checkEmailError() {
   }
   return isEmailError;
 }
+
+// hàm kiểm tra độ dài nôi dung nhập vào
 function checkLengthError(input, min) {
   input.value = input.value.trim();
   if (input.value.Length < min) {
@@ -64,6 +72,8 @@ function checkLengthError(input, min) {
   }
   return false;
 }
+
+// hành động chính
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   var isPasswordLength = checkLengthError(password, 6);
