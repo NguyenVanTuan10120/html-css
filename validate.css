@@ -66,7 +66,7 @@ body {
   font-size: 19px;
   color: #ffff;
   background: #0f9f0c;
-  margin: 50px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   cursor: pointer;
   transition: all 0.3s linear;
 }
@@ -74,13 +74,11 @@ body {
   background: #067e04;
 }
 .register a {
-  display: block;
+  display: inline-block;
+  float: right;
   height: 30px;
   text-decoration: none;
-  position: absolute;
-  top: 330px;
-  right: 42px;
-  bottom: 0;
+  margin-top: 40px;
   color: #777;
   cursor: pointer;
 }
